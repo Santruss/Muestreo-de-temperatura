@@ -53,7 +53,7 @@ void display_temp(float temperatura) {
   // Variables para cada digito individualmente
   uint8_t digit_1, digit_2, digit_3;
   // Obtengo el valor de la decena
-  digit_1 = temperatura / 10;
+  
   // Prendo el digito 1
   gpio_put_masked(DIGITS, DIGIT_1);
   // Dibujo el digito
@@ -61,7 +61,7 @@ void display_temp(float temperatura) {
   // Espero
   sleep_ms(SLEEP_MS);
   // Obtengo el valor de la unidad
-  digit_2 = (temperatura * 10) / 100;
+  
   // Prendo el digito 2
   gpio_put_masked(DIGITS, DIGIT_2);
   // Dibujo el digito 2 con el punto
@@ -69,7 +69,7 @@ void display_temp(float temperatura) {
   // Espero
   sleep_ms(SLEEP_MS);
   // Obtengo el valor del primer decimal
-  digit_3 = (temperatura * 10) / 10;
+  
   // Prendo el digito 3
   gpio_put_masked(DIGITS, DIGIT_3);
   // Dibujo el digito
